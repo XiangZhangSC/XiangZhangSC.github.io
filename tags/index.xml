@@ -2,170 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Xiang Zhang</title>
-    <link>http://xiangzhangsc.github.io/tags/</link>
+    <link>https://xiangzhangsc.github.io/tags/</link>
     <description>Recent content in Tags on Xiang Zhang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="http://xiangzhangsc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://xiangzhangsc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>plot</title>
-      <link>http://xiangzhangsc.github.io/tags/plot/</link>
+      <link>https://xiangzhangsc.github.io/tags/plot/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/plot/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>http://xiangzhangsc.github.io/tags/r-markdown/</link>
+      <link>https://xiangzhangsc.github.io/tags/r-markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/r-markdown/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>http://xiangzhangsc.github.io/tags/regression/</link>
+      <link>https://xiangzhangsc.github.io/tags/regression/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/regression/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>http://xiangzhangsc.github.io/tags/go/</link>
+      <link>https://xiangzhangsc.github.io/tags/go/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/go/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://xiangzhangsc.github.io/tags/golang/</link>
+      <link>https://xiangzhangsc.github.io/tags/golang/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/golang/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://xiangzhangsc.github.io/tags/hugo/</link>
+      <link>https://xiangzhangsc.github.io/tags/hugo/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/hugo/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>http://xiangzhangsc.github.io/tags/themes/</link>
+      <link>https://xiangzhangsc.github.io/tags/themes/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/themes/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>http://xiangzhangsc.github.io/tags/development/</link>
+      <link>https://xiangzhangsc.github.io/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/development/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>template</title>
-      <link>http://xiangzhangsc.github.io/tags/template/</link>
+      <link>https://xiangzhangsc.github.io/tags/template/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/template/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/template/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jekyll</title>
-      <link>http://xiangzhangsc.github.io/tags/jekyll/</link>
+      <link>https://xiangzhangsc.github.io/tags/jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/jekyll/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>static-site-generator</title>
-      <link>http://xiangzhangsc.github.io/tags/static-site-generator/</link>
+      <link>https://xiangzhangsc.github.io/tags/static-site-generator/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/static-site-generator/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/static-site-generator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bootstrap</title>
-      <link>http://xiangzhangsc.github.io/tags/bootstrap/</link>
+      <link>https://xiangzhangsc.github.io/tags/bootstrap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/bootstrap/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/bootstrap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>http://xiangzhangsc.github.io/tags/css/</link>
+      <link>https://xiangzhangsc.github.io/tags/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/css/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>highlight-js</title>
-      <link>http://xiangzhangsc.github.io/tags/highlight-js/</link>
+      <link>https://xiangzhangsc.github.io/tags/highlight-js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/highlight-js/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/highlight-js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>http://xiangzhangsc.github.io/tags/html/</link>
+      <link>https://xiangzhangsc.github.io/tags/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/html/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>js</title>
-      <link>http://xiangzhangsc.github.io/tags/js/</link>
+      <link>https://xiangzhangsc.github.io/tags/js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/js/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>responsive</title>
-      <link>http://xiangzhangsc.github.io/tags/responsive/</link>
+      <link>https://xiangzhangsc.github.io/tags/responsive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/responsive/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/responsive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>syntax-highlighting</title>
-      <link>http://xiangzhangsc.github.io/tags/syntax-highlighting/</link>
+      <link>https://xiangzhangsc.github.io/tags/syntax-highlighting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xiangzhangsc.github.io/tags/syntax-highlighting/</guid>
+      <guid>https://xiangzhangsc.github.io/tags/syntax-highlighting/</guid>
       <description></description>
     </item>
     
