@@ -1,0 +1,163 @@
+---
+title: Working with tmux and R on remote computers
+author: Xiang Zhang
+date: '2021-05-18'
+slug: []
+categories:
+  - R
+tags: []
+---
+This is my first-ever blog post. 
+For the purpose of network reverse-engineering, I need to work with my powerful workstation at the university campus. 
+Since I am working from home, I need to do that remotely. 
+Furthermore, since the programs that I need for network reverse-engineering are Bioconductor packages, I also need to install these packages beforehand. 
+I am a disciplined R programmer. 
+I always use `renv` to manage packages for each project individually. 
+Can I keep my discipline when I work with the remote workstation as well? 
+In this post, I will record my steps from scratch. 
+
+# Step 1 Connect to the remote workstation
+
+```{bash eval=FALSE}
+ssh xiang@alive.bio.uu.nl
+```
+
+Then type the password. 
+Next, log in my workstation. 
+
+```{bash eval=FALSE}
+ssh trias
+```
+
+# Step 2 Start a tmux session
+
+I have heard `tmux` for a long time. 
+The most important reason people love `tmux` is that your computation will not be killed when you lose the internet connection. 
+Here I start a new `tmux` session.
+
+```{bash eval=FALSE}
+tmux
+```
+
+# Step 3 Create a project folder
+
+I have a folder called "Projects" in my home directory. 
+Now, I am going to make a new folder inside the "Projects" folder to include all the data and scripts I use for the network reverse-engineering. 
+
+```{bash eval=FALSE}
+cd Projects
+mkdir lateral_root_formation
+cd lateral_root_formation
+```
+
+# Step 4 Install `renv` package
+
+Now, I am standing in the folder "lateral_root_formation" and I am ready to install Bioconductor packages. 
+I always use `renv` to make sure isolation of project-specific packages. 
+How can I do that here?
+
+First, I launch the R
+
+```{bash eval=FALSE}
+R
+```
+
+Next, I will install the `renv` package.
+
+```{r eval=FALSE}
+install.packages("renv")
+```
+
+Once the installation is done, I am going to initialize the `renv`. 
+
+```{r eval=FALSE}
+renv::init()
+```
+
+In the message of `renv::init()` I am told to restart the R session. 
+So I did that. 
+
+# Step 5 Install Bioconductor packages
+
+Now I am ready to install Bioconductor packages. 
+For this project, I am going to use the Bioconductor `GRENITS`. 
+
+```{r eval=FALSE}
+install.packages("BiocManager")
+BiocManager::install("GRENITS")
+```
+
+# Step 6 Run a network inference example on the remote workstation
+
+Now it's time to have a try. 
+Here I am going to run the example that is presented in the documentation of `GRENITS` package. 
+For working on remote workstation, I need to have a R script and run `Rscript`. 
+
+First, I quit from the R interactive session and I created a R script with the text editor, `nano`. 
+
+```{bash eval=FALSE}
+touch run_grenits_example.R
+nano run_grenits_example.R
+```
+
+The R script contains the following R commands
+
+```{r eval=FALSE}
+#! /usr/bin/Rscript
+library(GRENITS)
+
+data(Athaliana_ODE)
+
+output.folder <- "./Example_LinearNet"
+LinearNet(output.folder, Athaliana_ODE)
+
+# Analyse raw results, place analysis plots and files in output.folder
+analyse.output(output.folder)
+```
+
+To run the script with Rscript, I must first authorize the file:
+
+```{bash eval=FALSE}
+chmod +x run_grenits_example.R
+```
+
+Then, I can execute the R commands.
+
+```{bash eval=FALSE}
+Rscript run_grenits_example.R
+```
+
+For this particular example, the computational time is in seconds, so there is no obvious advantage of using `tmux` in this case. 
+However, when the calculation will take much longer time, then what I will do is to press `Ctrl` + `B` and then press `D` to detach the session. 
+The magical thing is that the computation will go on while I am driving home from work. 
+Once I get home and re-connect the internet, I can check the status of the computation by 
+
+```{bash eval=FALSE}
+ssh xiang@alive.bio.uu.nl
+ssh trias
+tmux ls
+tmux attach -t 0 # or the name of the session
+```
+
+# Step 7 Transfer the outcome files to my local computer
+
+My laptop is my primary workhorse for data visualization, writing manuscript and making presentations. 
+Therefore, I need frequently download the computational outcomes from the workstation to my local computer. 
+How to do this?
+
+First, start a new terminal session on my laptop. 
+Then go to the directory where I want to keep the output files. 
+
+```{bash eval=FALSE}
+cd Downloads/
+scp xiang@alive.bio.uu.nl:/home/xiang/Projects/lateral_root_formation/Example_LinearNet/"*" .
+```
+
+Type the password and then I get all the files I want!
+
+# The end
+
+This is my first post and I start with a note for my own. 
+This is a simple workflow that I probably will do many times later. 
+If I forget something or some commands, I will read my own post and won't bother my colleagues again with the same questions. 
+If it can help someone, I will be more than happy. 

@@ -11,67 +11,19 @@
     <loc>https://xiangzhangsc.github.io/project/project4/</loc>
   </url><url>
     <loc>https://xiangzhangsc.github.io/categories/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/post/2020-12-01-r-rmarkdown/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/plot/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xiangzhangsc.github.io/post/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xiangzhangsc.github.io/categories/r/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/r-markdown/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/regression/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <loc>https://xiangzhangsc.github.io/post/2021-05-18-working-with-tmux-and-r-on-remote-computers/</loc>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xiangzhangsc.github.io/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/go/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/golang/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/themes/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/template/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xiangzhangsc.github.io/tags/static-site-generator/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xiangzhangsc.github.io/about/</loc>
   </url><url>
@@ -79,9 +31,15 @@
   </url><url>
     <loc>https://xiangzhangsc.github.io/tags/css/</loc>
   </url><url>
+    <loc>https://xiangzhangsc.github.io/tags/go/</loc>
+  </url><url>
+    <loc>https://xiangzhangsc.github.io/tags/golang/</loc>
+  </url><url>
     <loc>https://xiangzhangsc.github.io/tags/highlight-js/</loc>
   </url><url>
     <loc>https://xiangzhangsc.github.io/tags/html/</loc>
+  </url><url>
+    <loc>https://xiangzhangsc.github.io/tags/hugo/</loc>
   </url><url>
     <loc>https://xiangzhangsc.github.io/tags/js/</loc>
   </url><url>
@@ -90,5 +48,7 @@
     <loc>https://xiangzhangsc.github.io/tags/responsive/</loc>
   </url><url>
     <loc>https://xiangzhangsc.github.io/tags/syntax-highlighting/</loc>
+  </url><url>
+    <loc>https://xiangzhangsc.github.io/tags/</loc>
   </url>
 </urlset>
