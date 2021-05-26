@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on Xiang Zhang</title>
+    <link>https://xiangzhangsc.github.io/categories/statistics/</link>
+    <description>Recent content in Statistics on Xiang Zhang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xiangzhangsc.github.io/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transcript Number Rethinking</title>
+      <link>https://xiangzhangsc.github.io/post/2021-05-25-umi-count-and-transcript-number/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiangzhangsc.github.io/post/2021-05-25-umi-count-and-transcript-number/</guid>
+      <description>I notice some colleagues working with “transcript count” RNAseq data. Interestingly, these “transcript count” are not integers. However, these “transcript count” data were treated as regular count data and still used as input for differential expression analysis tool such as deseq2.
+More interestingly, when I asked “what is transcript count?” the answer I got is always “it is UMI count with some sophisticated statistical transformation.” Although this answer does not contain details, it is clear that “transcript count” is based on UMI count.</description>
+    </item>
+    
+  </channel>
+</rss>

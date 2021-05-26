@@ -1,0 +1,105 @@
+---
+title: Transcript Number Rethinking
+author: Xiang Zhang
+date: '2021-05-25'
+slug: []
+categories:
+  - Statistics
+tags:
+  - Count
+bibliography: reference.bib
+---
+
+I notice some colleagues working with "transcript count" RNAseq data. 
+Interestingly, these "transcript count" are not integers. 
+However, these "transcript count" data were treated as regular count data and still used as input for differential expression analysis tool such as deseq2. 
+
+More interestingly, when I asked "what is transcript count?", the answer I got is always "it is UMI count with some sophisticated statistical transformation". 
+Although this answer does not contain details, it is clear that "transcript count" is based on UMI count. 
+What is the "sophisticated statistical transformation"?
+With the help of my colleague, I found the details embedded in the publication [@Grun2014]. 
+Surprisingly, the "sophisticated statistical transformation" includes three equations:
+
+\begin{align}
+
+K &= k_{o,i} + k_{n,i} \\
+(1 - \frac{1}{K})^{m_i} &= \frac{k_{n,i}}{K} \\
+m_i &= \frac{ln(\frac{k_{n,i}}{K})}{ln(1 - \frac{1}{K})} \\
+&= \frac{ln(\frac{K - k_{o,i}}{K})}{ln(1 - \frac{1}{K})} \\
+&= \frac{ln(1 - \frac{k_{o,i}}{K})}{ln(1 - \frac{1}{K})}
+
+\end{align}
+
+1. $K$ represents the total number of UMIs.
+2. $k_{o,i}$ the number of observed UMIs for gene $i$.
+3. $k_{n,i}$ the number of unobserved UMIs for gene $i$.
+4. $m_i$ the number of transcript molecules derived from gene $i$.
+
+If the sequencing data were generated based on the CEL-Seq protocol [@Hashimshony2012], $K = 4^4 = 256$. 
+If the sequencing data were generated based on the CEL-Seq2 protocol [@Hashimshony2016], $K = 4^6 = 4096$. 
+Why $4^4$ or $4^6$? 
+This is because UMI is basically a 4 (CEL-Seq) or 6 (CEL-Seq2) base pair nucleotides. 
+Each position has four possibilities, A, C, T or G.
+
+An important thing to realize is that for every gene, the CEL-seq or CEL-Seq2 only sequences 50 bases of the cDNA. 
+So, this sequencing method does not distinguish transcript isoformers. 
+Therefore, here we are talking about gene-level quantification. 
+For every gene there are $K$ UMIs available for the RNA molecules. 
+The logic is that the 50 bases tell us from which gene a RNA molecule comes. 
+The UMI tells us whether this RNA molecule is a PCR artifact or not. 
+
+## Rethinking the conversion of UMI count into transcript number
+
+The goal of the conversion is to calculate how many RNA molecules are there in the cell at the first place. 
+To this end, the approach is by asking what is the probability of not observing $k_{n,i}$ UMIs for a gene with $m_i$ copies?
+
+In the [@Grun2014], this probability was given as 
+
+$$
+(1 - \frac{1}{K})^{m_i} = \frac{k_{n,i}}{K}
+$$
+
+On the left hand side of the equation it is $m_i$ times Bernoulli probability regarding RNA molecules. 
+On the right hand side of the equation, it is the proportion of "unobserved" UMI marker for gene $i$. 
+My interpretation of this equation is that the author attempted to explain the proportion of "unobserved" UMI marker by $m_i$ times independent Bernoulli process. 
+
+**I AM STRUGGLING WITH THIS EQUATION!**
+
+First of all, why is there an unobserved UMI marker? 
+Some possibilities:
+
+1. a UMI marker is not attached to any RNA molecules. 
+    a. No RNA molecule from a gene $i$ (not expressing, $m_i = 0$). 
+    b. binding of UMI marker and a RNA molecule fails. 
+2. a UMI marker is attached to a RNA molecule but it is not detected during sequencing process. 
+
+Based on the above arguments, I think the probability of not observing a UMI is a mixture of two parts. 
+
+$$
+Pr(\text{not observe}) = Pr(\text{not observe}|\text{not attach}) Pr(\text{not attach}) + 
+Pr(\text{not observe|attach}) Pr(\text{attach}))
+$$
+Apparently $Pr(\text{not observe}|\text{not attach}) = 1$ and $Pr(\text{not observe|attach})$ should be considered as observing zero count according to a Poisson distribution. 
+
+Meanwhile, $Pr(\text{not attach})$ itself is also a mixture of two parts:
+
+$$
+Pr(\text{not attach}) = Pr(\text{not attach|gene not express}) Pr(\text{gene not express}) + 
+Pr(\text{not attach|gene express}) Pr(\text{gene express})
+$$
+Of course $Pr(\text{not attach|gene not express}) = 1$
+
+For a gene with $m_i$ copies of RNA molecules. 
+There are ${K \choose m_i}$ ways of combinations of UMI markers and RNA molecules. 
+Since every combination is equally possible, $Pr(\text{attach}) = \frac{1}{K \choose m_i} = \frac{m_i!(K - m_i)!}{K!}$. 
+
+For example, when $m_i = 1$, then $Pr(\text{attach}) = \frac{1}{K}$. 
+In this case, $1 - \frac{1}{K} = 1 - Pr(\text{attach}) = Pr(\text{not attach})$
+
+# Conclusion
+
+I do not think that this conversion makes sense and necessary. 
+Attaching UMI and RNA molecules is independent only between genes. 
+Thus, the power of $m_i$ in the equation does not make sense. 
+
+# Reference
